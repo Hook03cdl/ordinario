@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/style.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"
+		/>
+
+		<title>Document</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="contenain-canvas">
+				<canvas id="my-canvas"></canvas>
+			</div>
+			<main class="options">
+				<section>
+					<h3>Shapes</h3>
+					<ul>
+						<li data-type="rectangle">
+							<i class="ti ti-square"></i>
+							<h4>Rectangle</h4>
+						</li>
+						<li data-type="triangle">
+							<i class="ti ti-triangle"></i>
+							<h4>Triangle</h4>
+						</li>
+						<li data-type="circle">
+							<i class="ti ti-circle"></i>
+							<h4>Circle</h4>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Options</h3>
+					<ul>
+						<li data-type="brush" class="active">
+							<i class="ti ti-brush"></i>
+							<h4>Brush</h4>
+						</li>
+						<li data-type="eraser">
+							<i class="ti ti-eraser"></i>
+							<h4>Eraser</h4>
+						</li>
+						<li data-type="fill">
+							<i class="ti ti-arrows-maximize"></i>
+							<h4>Fill color</h4>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Colors</h3>
+					<ul>
+						<li class="colors">
+							<span>
+								<input
+									type="radio"
+									name="color"
+									value="#000"
+									id="color1"
+									checked
+								/>
+								<label for="color1" style="color: #000">
+									<i class="ti ti-circle-filled"></i>
+								</label>
+							</span>
+
+							<span>
+								<input type="radio" name="color" value="#c61818" id="color2" />
+								<label for="color2" style="color: #c61818">
+									<i class="ti ti-circle-filled"></i>
+								</label>
+							</span>
+							<span>
+								<input type="radio" name="color" value="#1874c6" id="color3" />
+								<label for="color3" style="color: #1874c6">
+									<i class="ti ti-circle-filled"></i>
+								</label>
+							</span>
+							<span>
+								<input type="radio" name="color" value="#2dc618" id="color4" />
+								<label for="color4" style="color: #2dc618">
+									<i class="ti ti-circle-filled"></i>
+								</label>
+							</span>
+
+							<span>
+								<input type="radio" name="color" value="#e8eb1b" id="color5" />
+								<label for="color5" style="color: #e8eb1b">
+									<i class="ti ti-circle-filled"></i>
+								</label>
+							</span>
+						</li>
+						<li data-type="">
+							<i class="ti ti-eraser"></i>
+							<h4>Eraser</h4>
+						</li>
+					</ul>
+				</section>
+			</main>
+		</div>
+
+		<script src="https://cdn.jsdelivr.net/npm/@tabler/icons@1.74.0/icons-react/dist/index.umd.min.js"></script>
+		<script src="/script.js"></script>
+	</body>
+</html>
