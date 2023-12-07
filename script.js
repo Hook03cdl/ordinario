@@ -5,6 +5,8 @@ var colors = document.querySelectorAll('.selectColor');
 var action = document.querySelector('.active').id;
 var fill = document.getElementById('fill');
 var size = document.getElementById('size');
+var cleanButton = document.querySelector('.clean');
+var saveButton = document.querySelector('.save');
 
 canvas.width = contenain.offsetWidth;
 canvas.height = contenain.offsetHeight;
@@ -113,3 +115,16 @@ canvas.addEventListener('mousedown', drawStart);
 canvas.addEventListener('mouseup', () => (isDrawing = false));
 canvas.addEventListener('mousemove', draw);
 canvas.addEventListener('click', figure);
+
+cleanButton.addEventListener('click', () => {
+	ctx.fillStyle = '#fff';
+	ctx.fillRect(0, 0, canvas.width, canvas.height);
+});
+saveButton.addEventListener('click', (e) => {
+	e.preventDefault();
+	var image = canvas.toDataURL('image/png');
+	var link = document.createElement('a');
+	link.href = image;
+	link.download = 'my-art.png';
+	link.click();
+});

@@ -8,8 +8,13 @@
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"
 		/>
+		<link
+			rel="shortcut icon"
+			href="https://cdn-icons-png.flaticon.com/512/7564/7564768.png"
+			type="image/x-icon"
+		/>
 
-		<title>Document</title>
+		<title>Artisan</title>
 	</head>
 	<body>
 		<div class="container">
@@ -119,14 +124,21 @@
 								</label>
 							</span>
 						</li>
-						<li class="brushwidth" id="">
+						<li class="brushwidth">
 							<input type="range" id="size" min="1" max="50" value="5" />
+							<span class=""></span>
 						</li>
 					</ul>
 				</section>
-				<section class="buttons">
-					<button>Clean screen</button>
-					<button>Save to image</button>
+				<section class="buttons" onclick="clean()">
+					<button class="clean">
+						<i class="ti ti-trash"></i>
+						<span> Clean screen </span>
+					</button>
+					<button class="save" onclick="save()">
+						<i class="ti ti-download"></i>
+						<span> Save to image </span>
+					</button>
 				</section>
 			</main>
 		</div>
