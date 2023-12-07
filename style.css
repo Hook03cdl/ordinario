@@ -75,3 +75,19 @@ body {
 		cursor: pointer;
 	}
 }
+.buttons {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	& button {
+		padding: 10px 20px;
+		background-color: transparent;
+		border: none;
+	}
+	& :nth-child(1) {
+		position: relative;
+		background-color: rgb(0, 0, 0, 0.5);
+		color: #fff;
+		/* backdrop-filter: blur(10px); */
+	}
+}

@@ -20,34 +20,34 @@
 				<section>
 					<h3>Shapes</h3>
 					<ul>
-						<li data-type="rectangle">
+						<li class="option" id="rectangle">
 							<i class="ti ti-square"></i>
 							<h4>Rectangle</h4>
 						</li>
-						<li data-type="triangle">
+						<li class="option" id="triangle">
 							<i class="ti ti-triangle"></i>
 							<h4>Triangle</h4>
 						</li>
-						<li data-type="circle">
+						<li class="option" id="circle">
 							<i class="ti ti-circle"></i>
 							<h4>Circle</h4>
+						</li>
+						<li class="fill">
+							<input type="checkbox" id="fill" />
+							<label for="fill">Fill color</label>
 						</li>
 					</ul>
 				</section>
 				<section>
 					<h3>Options</h3>
 					<ul>
-						<li data-type="brush" class="active">
+						<li class="option active" id="brush" class="active">
 							<i class="ti ti-brush"></i>
 							<h4>Brush</h4>
 						</li>
-						<li data-type="eraser">
+						<li class="option" id="eraser">
 							<i class="ti ti-eraser"></i>
 							<h4>Eraser</h4>
-						</li>
-						<li data-type="fill">
-							<i class="ti ti-arrows-maximize"></i>
-							<h4>Fill color</h4>
 						</li>
 					</ul>
 				</section>
@@ -58,6 +58,7 @@
 							<span>
 								<input
 									type="radio"
+									class="selectColor"
 									name="color"
 									value="#000"
 									id="color1"
@@ -69,36 +70,63 @@
 							</span>
 
 							<span>
-								<input type="radio" name="color" value="#c61818" id="color2" />
+								<input
+									type="radio"
+									class="selectColor"
+									name="color"
+									value="#c61818"
+									id="color2"
+								/>
 								<label for="color2" style="color: #c61818">
 									<i class="ti ti-circle-filled"></i>
 								</label>
 							</span>
 							<span>
-								<input type="radio" name="color" value="#1874c6" id="color3" />
+								<input
+									type="radio"
+									class="selectColor"
+									name="color"
+									value="#1874c6"
+									id="color3"
+								/>
 								<label for="color3" style="color: #1874c6">
 									<i class="ti ti-circle-filled"></i>
 								</label>
 							</span>
 							<span>
-								<input type="radio" name="color" value="#2dc618" id="color4" />
+								<input
+									type="radio"
+									class="selectColor"
+									name="color"
+									value="#2dc618"
+									id="color4"
+								/>
 								<label for="color4" style="color: #2dc618">
 									<i class="ti ti-circle-filled"></i>
 								</label>
 							</span>
 
 							<span>
-								<input type="radio" name="color" value="#e8eb1b" id="color5" />
+								<input
+									type="radio"
+									class="selectColor"
+									name="color"
+									value="#e8eb1b"
+									id="color5"
+								/>
 								<label for="color5" style="color: #e8eb1b">
 									<i class="ti ti-circle-filled"></i>
 								</label>
 							</span>
 						</li>
-						<li data-type="">
-							<i class="ti ti-eraser"></i>
-							<h4>Eraser</h4>
+						<li class="brushwidth" id="">
+							<input type="range" id="size" min="1" max="50" value="5" />
 						</li>
 					</ul>
+				</section>
+				<section class="buttons">
+					<button>Clean screen</button>
+					<button>Save to image</button>
 				</section>
 			</main>
 		</div>
