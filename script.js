@@ -5,6 +5,7 @@ var colors = document.querySelectorAll('.selectColor');
 var action = document.querySelector('.active').id;
 var fill = document.getElementById('fill');
 var size = document.getElementById('size');
+var textSize = document.querySelector('.textSize');
 var cleanButton = document.querySelector('.clean');
 var saveButton = document.querySelector('.save');
 
@@ -19,6 +20,7 @@ var isDrawing = false;
 var brushwidth = 5;
 var x, y, snapShot;
 var colorSelect;
+var isResize = false;
 
 options.forEach((option) => {
 	option.addEventListener('click', () => {
@@ -104,10 +106,13 @@ const figure = (e) => {
 size.addEventListener('change', () => {
 	brushwidth = size.value;
 });
+size.addEventListener('mousemove', () => {
+	textSize.innerText = size.value;
+});
+
 colors.forEach((color) => {
 	color.addEventListener('click', () => {
 		colorSelect = color.value;
-		console.log(colorSelect);
 	});
 });
 
