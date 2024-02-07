@@ -12,7 +12,7 @@ var saveButton = document.querySelector('.save');
 canvas.width = contenain.offsetWidth;
 canvas.height = contenain.offsetHeight;
 
-var ctx = canvas.getContext('2d');
+var ctx = canvas.getContext('2d', { willReadFrequently: true });
 ctx.fillStyle = '#fff';
 ctx.fillRect(0, 0, canvas.width, canvas.height);
 
@@ -33,8 +33,8 @@ options.forEach((option) => {
 
 var drawStart = (e) => {
 	isDrawing = true;
-	x = e.offsetX;
-	y = e.offsetY;
+	x = e.touches ? e.touches[0].clientX : e.offsetX;
+	y = e.touches ? e.touches[0].clientY : e.offsetY;
 	ctx.beginPath();
 	ctx.lineWidth = brushwidth;
 	ctx.strokeStyle = colorSelect;
@@ -120,6 +120,16 @@ canvas.addEventListener('mousedown', drawStart);
 canvas.addEventListener('mouseup', () => (isDrawing = false));
 canvas.addEventListener('mousemove', draw);
 canvas.addEventListener('click', figure);
+
+canvas.addEventListener('touchstart', (e) => {
+	e.preventDefault();
+	drawStart(e);
+});
+canvas.addEventListener('touchcancel', () => (isDrawing = false));
+canvas.addEventListener('touchmove', (e) => {
+	e.preventDefault();
+	draw(e);
+});
 
 cleanButton.addEventListener('click', () => {
 	ctx.fillStyle = '#fff';

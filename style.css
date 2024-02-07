@@ -38,7 +38,8 @@ body {
 	& section {
 		margin-bottom: 20px;
 		& ul {
-			display: grid;
+			display: flex;
+			flex-direction: column;
 			gap: 10px;
 			& li {
 				list-style: none;
@@ -108,5 +109,37 @@ body {
 	}
 	& .save {
 		background-color: #008eea;
+	}
+}
+
+@media (width <= 780px) {
+	.container {
+		padding: 10px;
+		padding-top: 0;
+	}
+	.container {
+		flex-direction: column-reverse;
+	}
+	.options {
+		& section {
+			display: flex;
+			gap: 10px;
+			& ul {
+				flex-direction: row;
+				flex-wrap: wrap;
+				gap: 20px;
+			}
+		}
+	}
+	.option h4 {
+		display: none;
+	}
+
+	.buttons {
+		flex-direction: row;
+		justify-content: center;
+		& span {
+			display: none;
+		}
 	}
 }
